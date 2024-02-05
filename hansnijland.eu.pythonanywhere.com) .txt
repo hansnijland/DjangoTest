@@ -1,0 +1,12 @@
+hansnijland.eu.pythonanywhere.com) 19:12 ~/hansnijland.eu.pythonanywhere.com/mysite (main)$ python manage.py createsuperuser
+Gebruikersnaam (leave blank to use 'hansnijland'): 
+E-mailadres: hans.nijland@gmail.com
+Password: Koffiemok
+
+*-----------------------------------------------
+*
+*        Website
+https://hansnijland.eu.pythonanywhere.com/
+*
+*
+*-----------------------------------------------
