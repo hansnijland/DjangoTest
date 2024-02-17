@@ -12,25 +12,11 @@
 </head>
 
 <body>
-    <article>
+    <header>
         <h1>Hey welkom op mijn blog</h1>
-    </article>
+    </header>
 
     {% block content %}
-    <article>
-        <h1>Mijn favoriete wielrenners</h1>
-    </article>
-    {% for wielrenner in wielrenners %}
-    <article class="wielrenner">
-        <h1>Renner toevoegen</h1>
-        <time class="date">
-            {{ wielrenner.published_date }}
-        </time>
-        <h2><a href="">{{ wielrenner.naamrenner}}</a></h2>
-        <p>{{ wielrenner.huidigeploeg|linebreaksbr}}</p>
-    </article>
-    {% endfor %}
-
     {% for post in posts %}
     <article class="post">
         <time class="date">
@@ -38,26 +24,10 @@
         </time>
         <h2><a href="">{{ post.title}}</a></h2>
         <p>{{ post.text|linebreaksbr}}</p>
+        <p class="author">{{ post.author|linebreaksbr}}</p>
     </article>
     {% endfor %}
     
-    <article>
-        <h1>Mijn favoriete voetbalspelers</h1>
-    </article>
-    
-    {% for voetbalspelers in voetbalspeler %}
-    <article class="voetbalspeler">
-        <h1>Spelers toevoegen</h1>
-        <time class="date">
-            {{ voetbalspeler.published_date }}
-        </time>
-        <h2><a href="">{{ voetbalspeler.naamspeler}}</a></h2>
-        <p>{{ voetbalspeler.huidige_club|linebreaksbr}}</p>
-    </article>
-    {% endfor %}
-
-   
-
     {% endblock %}
 </body>
 </html>
