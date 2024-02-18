@@ -15,19 +15,27 @@
     <header>
         <h1>Hey welkom op mijn blog</h1>
     </header>
-
-    {% block content %}
-    {% for post in posts %}
-    <article class="post">
-        <time class="date">
-            {{ post.published_date }}
-        </time>
-        <h2><a href="">{{ post.title}}</a></h2>
-        <p>{{ post.text|linebreaksbr}}</p>
-        <p class="author">{{ post.author|linebreaksbr}}</p>
-    </article>
-    {% endfor %}
     
-    {% endblock %}
+    <section>
+    <div id="inhoudeen"><h2>INHOUD DEEL 1</h2></div>
+    <div id="inhoudtwee">
+        {% block content %}
+        {% for post in posts %}
+        <article class="post">
+            <time class="date">
+                {{ post.published_date }}
+            </time>
+            <h2><a href="">{{ post.title}}</a></h2>
+            <p>{{ post.text|linebreaksbr}}</p>
+            <p class="author">{{ post.author|linebreaksbr}}</p>
+        </article>
+        {% endfor %}
+        {% endblock %}
+    </div>
+    
+    <div id="inhouddrie"><h2>INHOUD DEEL 3</h2></div>
+    </section>
+    
+    <footer><h1>DIT IS EEN FOOTER</h1></footer>
 </body>
 </html>
