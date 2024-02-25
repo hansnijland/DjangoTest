@@ -43,3 +43,7 @@ section{
 .post{
     background-color: pink;
 }
+a{
+    color: black;
+    text-decoration: underline;
+}

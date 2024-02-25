@@ -16,33 +16,4 @@ class Post(models.Model):
         self.save()
     
     def __str__(self):
-        return self.title
-    
-class Voetbalspeler(models.Model):
-    naamspeler = models.CharField(max_length=30)
-    huidigeclub = models.CharField(max_length=30)
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    created_date = models.DateTimeField(default=timezone.now)
-    published_date = models.DateTimeField(blank=True, null=True)
-
-    def publish(self):
-        self.published_date = timezone.now()
-        self.save()
-    
-    def __str__(self):
-        return self.naamspeler
-
-class Wielrenner(models.Model):
-    naamrenner = models.CharField(max_length=30)
-    ploeg = models.CharField(max_length=30)
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    created_date = models.DateTimeField(default=timezone.now)
-    published_date = models.DateTimeField(blank=True, null=True)
-
-    def publish(self):
-        self.published_date = timezone.now()
-        self.save()
-    
-    def __str__(self):
-        return self.naamrenner 
-    
+        return self.title   
